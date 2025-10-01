@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hockeyallsvenskan - Tabelläggare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏒 Hockeyallsvenskan Tabell</h1>
+            <p>Laborera med poäng och se hur tabellställningen ändras</p>
+        </header>
+
+        <div class="controls">
+            <button id="resetBtn" class="btn">Återställ tabell</button>
+            <button id="fetchBtn" class="btn">Hämta aktuell tabell</button>
+        </div>
+
+        <div class="table-container">
+            <table id="standingsTable">
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Lag</th>
+                        <th>GP</th>
+                        <th>W</th>
+                        <th>OTW</th>
+                        <th>OTL</th>
+                        <th>L</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>+/-</th>
+                        <th>Poäng</th>
+                        <th>Ändra</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Table rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info">
+            <h3>Instruktioner:</h3>
+            <ul>
+                <li>Klicka på knapparna +1 eller -1 för att justera ett lags poäng</li>
+                <li>Tabellen sorteras automatiskt efter ändringen</li>
+                <li>Använd "Återställ tabell" för att gå tillbaka till ursprungsdata</li>
+            </ul>
+            <p class="footnote">
+                GP = Spelade matcher, W = Vinster, OTW = Övertidsvinster, OTL = Övertidsförluster, 
+                L = Förluster, GF = Gjorda mål, GA = Insläppta mål, +/- = Målskillnad
+            </p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
